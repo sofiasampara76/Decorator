@@ -16,7 +16,7 @@ public class SmartDocument implements Document {
     public String parse(String filePath) {
         Tesseract tesseract = new Tesseract();
         // Set the path to tessdata
-        tesseract.setDatapath("/usr/share/tesseract-ocr/4.00/");
+        tesseract.setDatapath("/usr/share/tesseract-ocr/4.00/tessdata");
         tesseract.setLanguage("eng");
         try {
             return tesseract.doOCR(new File(this.filePath));

@@ -3,9 +3,10 @@ package ua.edu.ucu.apps;
 public class Main {
     public static void main(String[] args) {
         // Example file path to a local image
-        String filePath = "D:/downloads/StudentPhoto.jpg";
+        String filePath = "/mnt/d/downloads/Motivation board.png";
+        // "D:\downloads\Motivation board.png"
         Document document = new SmartDocument(filePath);
-        document = new CachedDocument(new TimeDocument(document));
+        document = new TimeDocument(document);
         System.out.println(document.parse(filePath));
     }
 }
